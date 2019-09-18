@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Hessian bean -->
+    <bean id="calculationBean"
+          class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+        <property name="serviceUrl"
+                  value="http://localhost:8080/HessianServer/Calculation.http"></property>
+        <property name="serviceInterface" value="evgenyt.springdemo.Calculation"></property>
+    </bean>
+</beans>
